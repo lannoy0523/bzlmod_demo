@@ -59,10 +59,10 @@ maven_install(
     name = "maven",
 
     artifacts = [
-        maven.artifact("com.example", "maven", "0.0.1"),
+        maven.artifact("cn.hutool", "hutool-all", "5.8.16"),
     ],
     repositories = [
-        "http://admin:password@localhost:8081/repository/maven_test/"
+        "https://repo1.maven.org/maven2"
     ],
     use_unsafe_shared_cache = True,
 )

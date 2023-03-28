@@ -12,6 +12,6 @@ java_binary(
     ]),
     main_class = "com.example.test",
     deps = [
-        "@maven//:com_example_maven",
+        "@maven//:cn_hutool_hutool_all",
     ],
 )
