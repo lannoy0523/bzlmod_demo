@@ -1,0 +1,22 @@
+module(
+    name = "maven-test",
+    version = "0.0.1"
+)
+
+bazel_dep(name = "rules_java", version = "5.5.0")
+bazel_dep(name = "rules_jvm_external", version = "4.5")
+
+maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
+
+maven.install(
+    name = "maven",
+    artifacts = [
+        "cn.hutool:hutool-all:5.8.16"
+    ],
+    repositories = [
+        "https://repo1.maven.org/maven2/",
+    ],
+    use_unsafe_shared_cache = True,
+)
+
+use_repo(maven, "maven")

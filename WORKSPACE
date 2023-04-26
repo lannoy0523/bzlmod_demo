@@ -55,14 +55,3 @@ load("@com_google_protobuf//:protobuf_deps.bzl", "protobuf_deps")
 
 protobuf_deps()
 
-maven_install(
-    name = "maven",
-
-    artifacts = [
-        maven.artifact("cn.hutool", "hutool-all", "5.8.16"),
-    ],
-    repositories = [
-        "https://repo1.maven.org/maven2"
-    ],
-    use_unsafe_shared_cache = True,
-)

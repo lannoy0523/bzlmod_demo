@@ -9,6 +9,6 @@ public class test {
 
     public static void main(String args[]) {
         Date date2 = DateUtil.date(Calendar.getInstance());
-        System.out.println(date2);
+        System.out.println("你好");
     }
 }
